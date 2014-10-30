@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>artshow</title>
+    <script type="text/javascript" src="cocos2d-js-v3.1.js" charset="UTF-8"></script>
+</head>
+<body>   
+    <canvas id="gameCanvas" width="800" height="450"></canvas>
+    <script type="text/javascript">
+          window.onload = function(){
+              cc.game.onStart = function(){
+                  cc.view.adjustViewPort(true);
+                  cc.view.setDesignResolutionSize(800, 450, cc.ResolutionPolicy.SHOW_ALL);
+                  cc.view.resizeWithBrowserSize(true);
+
+                  cc.LoaderScene.preload(g_resources, function () {
+                      cc.director.runScene(new LogoScene());
+                  }, this);
+              };
+              cc.game.run("gameCanvas");
+          };
+    </script>
+    <script type="text/javascript" src="src/resource.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="src/Artist.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="src/Art.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="src/LogoScene.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="src/PeopleScene.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="src/ArtScene.js" charset="UTF-8"></script>
+</body>
+</html>
