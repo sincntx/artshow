@@ -5,6 +5,8 @@ artshow is dynamic artshow application by [cocos2d-js](https://github.com/cocos2
 
 It supports cross-browser(Chrome, Safari, Firefox, IE9+ and etc) and cross-platform(Web, iOS, Android, Mac, Etc).
 
+Just play it now!
+
 ## Online Play
 
 - [http://htmlfive.co.kr/artshow/](http://htmlfive.co.kr/artshow/)
