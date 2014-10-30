@@ -3,5 +3,14 @@
     "frameRate"     : 60,
     "id"            : "gameCanvas",
     "renderMode"    : 1,
-    "jsList"        : []
+    "jsList" : [
+        "src/resource.js",
+
+        "src/Artist.js",
+        "src/Art.js",
+
+        "src/LogoScene.js",
+        "src/PeopleScene.js",
+        "src/ArtScene.js"
+    ]
 }
