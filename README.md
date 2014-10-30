@@ -11,35 +11,33 @@ It supports cross-browser(Chrome, Safari, Firefox, IE9+ and etc) and cross-platf
 
 ## Cocos2d-JS Version
 
-It based on Cocos2d-JS v3.1 Customized Version.
+It based on [Cocos2d-JS v3.1 Customized Version](http://cocos2d-x.org/filecenter/jsbuilder/).
 
--core
+- core
 
--webgl
+- webgl
 
--actions
+- actions
 
--audio
+- audio
 
--menus
+- menus
 
--render-texture
+- render-texture
 
--sprite-batch-node
+- sprite-batch-node
 
--labels
+- labels
 
--progress-timer
+- progress-timer
 
--transitions
+- transitions
 
-It contains only Cocos2d-JS web engine.
+It only contains Cocos2d-JS web engine.
 
 If you want to make native game, you need Cocos2d-JS full package please refer to [cocos2d-js](https://github.com/cocos2d/cocos2d-js).
 
 ## Screenshot
-
-<img src="./doc/s1.png"> 
 
 <img src="./doc/s2.png"> 
 
