@@ -37,7 +37,7 @@ It based on [Cocos2d-JS v3.1 Customized Version](http://cocos2d-x.org/filecenter
 
 It only contains Cocos2d-JS web engine.
 
-If you want to make native game, you need Cocos2d-JS full package please refer to [cocos2d-js](https://github.com/cocos2d/cocos2d-js).
+If you want to make native application, you need Cocos2d-JS full package please refer to [cocos2d-js](https://github.com/cocos2d/cocos2d-js).
 
 ## Screenshot
 
