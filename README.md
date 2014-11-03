@@ -7,6 +7,8 @@ It supports cross-browser(Chrome, Safari, Firefox, IE9+ and etc) and cross-platf
 
 Just play it now!
 
+Every resource is from [Wikipedia](http://en.wikipedia.org/wiki/Main_Page) and their licensing is [public domain](http://commons.wikimedia.org/wiki/Public_domain).
+
 ## Online Play
 
 - [http://htmlfive.co.kr/artshow/](http://htmlfive.co.kr/artshow/)
