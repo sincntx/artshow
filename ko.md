@@ -3,7 +3,7 @@
 
 ## artshow?
 
-artshow는 [cocos2d-js](https://github.com/cocos2d/cocos2d-js)로 만들어진 역동적인 명화 전시회 어플리케이으로 라이센스는 [MIT 라이센스](./LICENSE)를 적용합니다.
+artshow는 [cocos2d-js](https://github.com/cocos2d/cocos2d-js)로 만들어진 역동적인 명화 전시회 어플리케이션으로 라이센스는 [MIT 라이센스](./LICENSE)를 적용합니다.
 
 본 어플리케이션은 크로스 브라우져(크롬, 사파리, 파이어폭스, 익스플로러9+ 등)과 크로스 플랫폼(웹, iOS, 안드로이드, 맥, 윈도우즈 등)을 지원합니다.
 
