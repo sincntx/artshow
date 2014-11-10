@@ -11,13 +11,9 @@ artshow는 [cocos2d-js](https://github.com/cocos2d/cocos2d-js)로 만들어진 �
 
 일단 한번 플레이해보세요!
 
----
-
 ## 온라인 플레이
 
 - [http://htmlfive.co.kr/artshow/](http://htmlfive.co.kr/artshow/)
-
----
 
 ## Cocos2d-JS 버전
 
@@ -44,8 +40,6 @@ artshow는 [cocos2d-js](https://github.com/cocos2d/cocos2d-js)로 만들어진 �
 - transitions
 
 오직 Cocos2d-JS 웹 엔진만을 포함하고 있기 때문에 네이티브 어플리케이션으로 배포하시길 원하신다면 [cocos2d-js](https://github.com/cocos2d/cocos2d-js)에서 풀패키지를 설치하셔야 됩니다.
-
----
 
 ## 스크린샷
 
