@@ -1,4 +1,4 @@
-var PeopleLayer = cc.Layer.extend({
+var ArtistLayer = cc.Layer.extend({
     musicSetting : null,
     musicMenu : null,
     isShow: true,
@@ -213,10 +213,10 @@ var PeopleLayer = cc.Layer.extend({
     }
 });
 
-var PeopleScene = cc.Scene.extend({
+var ArtistScene = cc.Scene.extend({
     onEnter:function () {
         this._super();
-        var layer = new PeopleLayer();
+        var layer = new ArtistLayer();
         this.addChild(layer);
     }
 });

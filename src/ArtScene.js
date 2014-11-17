@@ -22,7 +22,7 @@ var ArtLayer = cc.Layer.extend({
         }
 
         closeItem = new cc.MenuItemImage("res/prev.png", "res/prev.png", function () {
-            scene = new PeopleScene();
+            scene = new ArtistScene();
             cc.director.runScene(new cc.TransitionShrinkGrow(1, scene));
         }, this);
         closeItem.setScale(0.5);
@@ -88,7 +88,7 @@ var ArtLayer = cc.Layer.extend({
                 event: cc.EventListener.KEYBOARD,
                 onKeyReleased: function(keyCode, event){
                     if (keyCode == cc.KEY.back) {
-                        scene = new PeopleScene();
+                        scene = new ArtistScene();
                         cc.director.runScene(new cc.TransitionShrinkGrow(1, scene));
                     }
                 }

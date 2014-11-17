@@ -14,13 +14,13 @@ var LogoLayer = cc.Layer.extend({
         }
 
         logo = new cc.Sprite("res/artshowlogo.png");
-        logo.setPosition(size.width / 2, size.height / 2);
-        logo.setScale(0.7);
-        logo.setOpacity(0);
+        logo.x = size.width / 2;
+        logo.y = size.height / 2;
+        logo.opacity = 0;
         this.addChild(logo);
 
         logo.runAction( new cc.Sequence( new cc.FadeIn(1), new cc.DelayTime(1), new cc.FadeOut(1), new cc.CallFunc( function() {
-            var scene = new PeopleScene();
+            var scene = new ArtistScene();
             cc.director.runScene(scene);
         }, this) ) );
 
