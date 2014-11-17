@@ -25,12 +25,12 @@ var ArtLayer = cc.Layer.extend({
             scene = new ArtistScene();
             cc.director.runScene(new cc.TransitionShrinkGrow(1, scene));
         }, this);
-        closeItem.setScale(0.5);
 
         closeMenu = new cc.Menu(closeItem);
-        closeMenu.setPosition( size.width * ( 9 / 10 ) , size.height * ( 9 / 10 ) );
+        closeMenu.x = size.width * ( 9 / 10 );
+        closeMenu.y = size.height * ( 9 / 10 );
         this.addChild(closeMenu);
-        closeMenu.setOpacity(0);
+        closeMenu.opacity = 0;
         closeMenu.runAction( new cc.Sequence(new cc.DelayTime(1.5), new cc.FadeIn(1.5) ) );
 
         skipItem = new cc.MenuItemImage("res/skip.png", "res/skip.png", function (obj) {
@@ -42,12 +42,12 @@ var ArtLayer = cc.Layer.extend({
             obj.parent.removeFromParent();
         }, this);
 
-        skipItem.setScale(0.6);
         skipMenu = new cc.Menu(skipItem);
-        skipMenu.setPosition( size.width * ( 9 / 10 ) - (size.width / 5) , size.height * ( 9 / 10 ) );
+        skipMenu.x = size.width * ( 9 / 10 ) - (size.width / 5);
+        skipMenu.y = size.height * ( 9 / 10 );
         this.addChild(skipMenu);
 
-        skipMenu.setOpacity(0);
+        skipMenu.opacity = 0;
         skipMenu.runAction( new cc.Sequence( new cc.DelayTime(1.5), new cc.FadeIn(1.5), new cc.DelayTime(artist.length * 7.5), new cc.FadeOut(1), new cc.CallFunc( function(obj) {
             this.isShow = false;
             obj.removeFromParent();
@@ -72,13 +72,13 @@ var ArtLayer = cc.Layer.extend({
             }, this);
         }
 
-        musicItem.setScale(0.6);
         this.musicMenu = new cc.Menu(musicItem);
-        this.musicMenu.setPosition( size.width * ( 9 / 10 ) - (size.width / 10) , size.height * ( 9 / 10 ) );
+        this.musicMenu.x = size.width * ( 9 / 10 ) - (size.width / 10);
+        this.musicMenu.y = size.height * ( 9 / 10 );
 
         this.addChild(this.musicMenu);
 
-        this.musicMenu.setOpacity(0);
+        this.musicMenu.opacity = 0;
         this.musicMenu.runAction( new cc.Sequence(new cc.DelayTime(1.5), new cc.FadeIn(1.5) ) );
 
         // Android Only
@@ -122,9 +122,9 @@ var ArtLayer = cc.Layer.extend({
             }, this);
         }
 
-        musicItem.setScale(0.6);
         this.musicMenu = new cc.Menu(musicItem);
-        this.musicMenu.setPosition( size.width * ( 9 / 10 ) - (size.width / 10) , size.height * ( 9 / 10 ) );
+        this.musicMenu.x = size.width * ( 9 / 10 ) - (size.width / 10);
+        this.musicMenu.y = size.height * ( 9 / 10 );
         this.addChild(this.musicMenu);
     }
 });

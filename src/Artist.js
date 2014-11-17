@@ -38,15 +38,16 @@ var Artist = cc.Menu.extend({
         cc.Menu.prototype.ctor.call(this, menuItem);
 
         this.setAnchorPoint(cc.p(0, 0));
-        this.setOpacity(0);
-        this.setScale(3);
-        this.setPosition(size.width / 2, size.height / 2);
+        this.opacity = 0;
+        this.scale = 3;
+        this.x = size.width / 2;
+        this.y = size.height / 2;
         parent.addChild(this);
 
-        this.runAction( new cc.Sequence( new cc.DelayTime(1 + no * 0.5), new cc.Spawn( new cc.MoveTo(1.5, this.position), new cc.FadeIn(1.5), new cc.ScaleTo(1.5, 0.6) ), new cc.FadeTo(1, 100) ) );
+        this.runAction( new cc.Sequence( new cc.DelayTime(1 + no * 0.5), new cc.Spawn(new cc.MoveTo(1.5, this.position), new cc.FadeIn(1.5), new cc.ScaleTo(1.5, 1) ), new cc.FadeTo(1, 100) ) );
     },
     runFast:function() {
         this.stopAllActions();
-        this.runAction( new cc.Sequence( new cc.Spawn( new cc.MoveTo(0.5, this.position), new cc.FadeIn(0.5), new cc.ScaleTo(0.5, 0.6) ), new cc.FadeTo(0.5, 100) ) );
+        this.runAction( new cc.Sequence( new cc.Spawn( new cc.MoveTo(0.5, this.position), new cc.FadeIn(0.5), new cc.ScaleTo(0.5, 1) ), new cc.FadeTo(0.5, 100) ) );
     }
 });

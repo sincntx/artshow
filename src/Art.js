@@ -22,7 +22,7 @@ var Art = cc.Menu.extend({
 
             image = new cc.MenuItemImage(sender.parent.src, sender.parent.src, function(obj) {
                 obj.stopAllActions();
-                obj.runAction(new cc.Sequence( new cc.Spawn( new cc.FadeOut(1.5), new cc.ScaleTo(1.5, 0.15) ), new cc.CallFunc(function(target) {
+                obj.runAction(new cc.Sequence( new cc.Spawn( new cc.FadeOut(1.5), new cc.ScaleTo(1.5, 0.3) ), new cc.CallFunc(function(target) {
                     target.parent.parent.isShow = false;
                     target.parent.removeFromParent();
                 }, obj) ));
@@ -30,16 +30,17 @@ var Art = cc.Menu.extend({
 
             parent.image = new cc.Menu(image);
             parent.image.setPosition(sender.parent.originX, sender.parent.originY);
-            parent.image.setOpacity(15);
-            parent.image.setScale(0.15);
+            //parent.image.opacity = 15;
+            parent.image.scale = 0.3;
             parent.addChild(parent.image);
 
             parent.image.runAction(new cc.Spawn( new cc.FadeIn(1.5), new cc.ScaleTo(1.5, 1), new cc.MoveTo(1.5, cc.p(size.width / 2, size.height / 2)) ));
         }, this);
 
         cc.Menu.prototype.ctor.call(this, menuItem);
-        this.setOpacity(0);
-        this.setPosition(size.width / 2, size.height / 2);
+        this.opacity = 0;
+        this.x = size.width / 2;
+        this.y = size.height / 2;
         parent.addChild(this);
 
         this.originX = ( Math.random() * size.width * 0.75 ) + (size.width * 0.2) - (this.width / 2);
@@ -50,8 +51,8 @@ var Art = cc.Menu.extend({
 
             for(i = 0;i < parent.arts.length;i++) {
                 if(i != this.no) {
-                    var rectA = cc.rect(this.originX, this.originY, this.getContentSize().width * 0.1, this.getContentSize().height * 0.1);
-                    var rectB = cc.rect(parent.arts[i].originX, parent.arts[i].originY, parent.arts[i].width * 0.1, parent.arts[i].height * 0.1);
+                    var rectA = cc.rect(this.originX, this.originY, this.getContentSize().width * 0.12, this.getContentSize().height * 0.12);
+                    var rectB = cc.rect(parent.arts[i].originX, parent.arts[i].originY, parent.arts[i].width * 0.12, parent.arts[i].height * 0.12);
 
                     if(!((rectA.x + rectA.width < rectB.x) || (rectB.x + rectB.width < rectA.x) || (rectA.y + rectA.height < rectB.y) || (rectB.y + rectB.height < rectA.y))) {
                         this.originX = ( Math.random() * size.width * 0.75 ) + (size.width * 0.2) - (this.width / 2);
@@ -62,10 +63,10 @@ var Art = cc.Menu.extend({
             }
         } while(check == true)
 
-        this.runAction(new cc.Sequence( new cc.DelayTime(3 + no * 4), new cc.FadeIn(1), new cc.DelayTime(1), new cc.Spawn( new cc.MoveTo(1.5, cc.p(this.originX, this.originY)), new cc.FadeTo(1.5, 100), new cc.ScaleTo(1.5, 0.15) ) ));
+        this.runAction(new cc.Sequence( new cc.DelayTime(3 + no * 4), new cc.FadeIn(1), new cc.DelayTime(1), new cc.Spawn( new cc.MoveTo(1.5, cc.p(this.originX, this.originY)), new cc.FadeTo(1.5, 100), new cc.ScaleTo(1.5, 0.3) ) ));
     },
     runFast: function() {
         this.stopAllActions();
-        this.runAction(new cc.Spawn( new cc.MoveTo(0.5, cc.p(this.originX, this.originY)), new cc.FadeTo(0.5, 100), new cc.ScaleTo(0.5, 0.15) ) );
+        this.runAction(new cc.Spawn( new cc.MoveTo(0.5, cc.p(this.originX, this.originY)), new cc.FadeTo(0.5, 100), new cc.ScaleTo(0.5, 0.3) ) );
     }
 });
